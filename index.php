@@ -53,7 +53,7 @@ $user_id = $_SESSION['user_id'];
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- App -->
-    <script src="src/app.js" async></script>
+    <script defer src="src/app.js" async></script>
 
     <!-- Midtrans -->
     <script type="text/javascript"

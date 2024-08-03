@@ -18,7 +18,6 @@ if(isset($_POST['submit'])){
       $mes[] = 'registered successfully!';
       header('location:login.php');
    }
-
 }
 
 ?>

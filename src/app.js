@@ -1,4 +1,11 @@
-document.addEventListener("alpine:init", () => {
+document.addEventListener("alpine:init", async () => {
+  // const connection = await mysql.createConnection({
+  //   host: 'auth-db1416.hstgr.io',
+  //   user: '',
+  //   database: 'u252033518_peep'
+  // });
+
+  // const [results, _] = await connection.query(`SELECT * FROM products`);
   Alpine.data("products", () => ({
     items: [
       { id: 1, name: "Custom Sepatu", img: "product1.jpg", price: 250000 },
@@ -19,6 +26,44 @@ document.addEventListener("alpine:init", () => {
       { id: 16, name: "Custom Jaket 4", img: "product16.jpg", price: 300000 },
     ],
   }));
+
+  // const response = await fetch("localhost/test/api/products.php", {
+  //   headers: {
+  //     Accept: "application/json",
+  //   },
+  // });
+  // console.log(response.headers.get("Content-Type"));
+
+  // Alpine.data("products", () => ({
+  //   items: data,
+  // }));
+
+  // try {
+  //   const response = await fetch("api/products.php");
+  //   const data = await response.json();
+
+  //   Alpine.data("products", () => ({
+  //     items: data,
+  //   }));
+  // } catch (error) {
+  //   console.error(error);
+  // }
+
+  // try {
+  //   const connection = await mysql2.createConnection({
+  //     host: "localhost",
+  //     user: "root",
+  //     database: "shop_db",
+  //   });
+
+  //   const [results, _] = await connection.query("SELECT * FROM products");
+
+  //   Alpine.data("products", () => ({
+  //     items: results,
+  //   }));
+  // } catch (error) {
+  //   console.error(error);
+  // }
 
   Alpine.store("cart", {
     items: [],
